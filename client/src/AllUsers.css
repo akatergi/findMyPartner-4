@@ -1,0 +1,33 @@
+a,
+.card,
+.cardTitle,
+.card-body,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#Ausername {
+    font-size: 1.6em;
+    font-weight:700;
+}
+
+#Adescription {
+    font-size: 1.3em;
+}
+
+/* img {
+    object-fit: cover;
+    width:100%
+} */
+
+.userCard{
+    transition: all 200ms;
+}
+
+.userCard:hover{
+    transform: scale(1.1);
+    /* margin-left:1em;
+    margin-right:1em; */
+}

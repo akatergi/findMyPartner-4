@@ -1,0 +1,31 @@
+.dTitle{
+    font-size:5em;
+}
+
+.dContainer{
+    border:2px solid #7b7b37;
+    background-color: #f1f1b3;
+    border-radius: 2em;
+    margin-top:2em;
+    padding:2em
+}
+
+.dImage{
+    width:80%;
+    margin-left:10%
+}
+
+.dh4{
+    font-size: 3em;
+    width:fit-content;
+    /* border: 1px solid lightgreen; */
+    background-color: yellowgreen;
+    border-radius: 10px;
+    padding:0.1em;
+    -webkit-box-shadow: -10px 9px 15px 5px rgb(205, 228, 158); 
+    box-shadow: -10px 9px 15px 5px rgb(216, 233, 181);
+}
+
+.dp{
+    font-size: 1.5em;
+}

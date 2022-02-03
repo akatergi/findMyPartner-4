@@ -1,0 +1,70 @@
+.mImage{
+    width:90%;
+    margin-left:5%;
+    /* transform: translateX(20%) */
+}
+
+.mE{
+    font-size:1.5em;
+    margin-bottom:0.5em;
+}
+
+.mTitle{
+    font-weight:700;
+}
+
+.userInfo{
+    border:1px solid lightgray;
+    background-color: rgb(255, 255, 255);
+    border-radius:0.3em;
+    padding-top: 1em;
+    padding-left: 1.1em;
+}
+
+.matchInfo{
+    border:1px solid rgb(23, 84, 23);
+    height:8em;
+    background-color: #ccf392;
+    border-radius: 0.3em;
+    padding-top:0.8em;
+    margin-bottom: 3em;
+    color:#154015
+}
+
+.infoSpan{
+    display: block;
+    margin-left:2em;
+    font-size:larger;
+}
+
+.posButton{
+    display: flex;
+    justify-content: space-between;
+    transform:translateY(40vh);
+}
+
+.myBtn{
+    font-size:1.2em;
+    border:none;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 0.4em;
+}
+
+.backBtn{
+    margin-left:1em;
+    background-color: #d266da;
+    color: rgb(72, 36, 72)
+}
+
+.nextBtn{
+    margin-right:1em;
+    background-color: #d266da;
+    color: rgb(72, 36, 72)
+}
+
+.container{
+    margin-left:3em
+}

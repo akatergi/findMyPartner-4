@@ -1,0 +1,20 @@
+.user,.nonuser{
+  display:flex;
+}
+
+.mainUL{
+  display:flex;
+  justify-content: space-between;
+  width:100%
+}
+
+.App{
+  min-height: 100vh;
+  background-color: #d6a6e9;
+  
+}
+
+.myNav{
+  background-color: rgb(86, 20, 86);
+  color:white
+}
