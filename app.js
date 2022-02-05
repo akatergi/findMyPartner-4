@@ -17,7 +17,7 @@ const cookieParser = require("cookie-parser")
 const { match } = require("./Tools")
 const isImageURL = require('image-url-validator').default;
 
-const dbURL = process.env.DB_URL || "mongodb://localhost:27017/myProject"
+const dbURL = "mongodb+srv://user:adminPass12345@cluster0.am7j8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongoose.connect(dbURL).then(() => console.log('Database connected')).catch(e=>console.log(e))
 const isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
