@@ -155,3 +155,7 @@ app.post("/update", async (req,res) => {
         return res.json({success:false, errMessage: e.message})
     }
 })
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'))
+  })
