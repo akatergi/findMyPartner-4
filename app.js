@@ -16,7 +16,7 @@ const session = require("express-session")
 const cookieParser = require("cookie-parser")
 const { match } = require("./Tools")
 const isImageURL = require('image-url-validator').default;
-
+//
 const dbURL = process.env.DB_URL || "mongodb://localhost:27017/myProject"
 mongoose.connect(dbURL).then(() => console.log('Database connected')).catch(e=>console.log(e))
 const isLoggedIn = (req, res, next) => {

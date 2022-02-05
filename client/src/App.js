@@ -21,6 +21,7 @@ function App() {
         <Route path="/create" element={<CreateUser />} />
         <Route path="/login" element={<LoginUser />} />
         <Route path="/matches" element={<Matches />} />
+        <Route path="/*" element={<h1>Could not find that route!</h1>} />
       </Routes>
     </div>
   );
