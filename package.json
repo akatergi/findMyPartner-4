@@ -4,7 +4,7 @@
   "description": "",
   "main": "Tools.js",
   "scripts": {
-    "start": "NODE_ENV=production && node app.js",
+    "start": "node app.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "keywords": [],

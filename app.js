@@ -18,7 +18,7 @@ const { match } = require("./Tools")
 const isImageURL = require('image-url-validator').default;
 
 const dbURL = "mongodb+srv://user:adminPass12345@cluster0.am7j8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-mongoose.connect(dbURL).then(() => console.log('Database connected')).catch(e=>console.log(e))
+mongoose.connect(dbURL).then(() => console.log('Database connected')).catch(e => console.log(e))
 const isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
         return res.json({ success: false })
@@ -28,11 +28,14 @@ const isLoggedIn = (req, res, next) => {
 
 const path = require('path')
 app.use(express.static(path.join(__dirname, 'client/build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'))
+})
 
 const store = MongoStore.create({
     mongoUrl: dbURL,
     secret: "secret",
-    touchAfter: 24*3600
+    touchAfter: 24 * 3600
 })
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("listening on port 5000"))
@@ -81,14 +84,14 @@ app.post("/create", async (req, res) => {
         const valid = await isImageURL(image)
         if (!valid) return res.json({ success: false, errMessage: "Image URL is invalid" })
     }
-    else{
+    else {
         image = "https://i0.wp.com/justmarkup.com/img/avatar-default.png"
     }
     const newUser = new User({ email, description, languages, skills, image, username })
     try {
         const registeredUser = await User.register(newUser, password)
     } catch {
-        res.json({success:false, errMessage: "Something went wrong"})
+        res.json({ success: false, errMessage: "Something went wrong" })
     }
     res.json({ success: true })
 })
@@ -115,7 +118,7 @@ app.get("/test", isLoggedIn, (req, res) => {
 })
 
 app.get("/isLogged", isLoggedIn, (req, res) => {
-    res.json({ success: true, user: req.session.user})
+    res.json({ success: true, user: req.session.user })
 })
 
 app.get("/matchdata", isLoggedIn, async (req, res) => {
@@ -136,7 +139,7 @@ app.get("/logout", (req, res) => {
     return res.send("L")
 })
 
-app.post("/update", async (req,res) => {
+app.post("/update", async (req, res) => {
     var { email, description, languages, skills, image, username, _id, password } = req.body;
     skills = skills.split(",").map(s => s.trim().toLowerCase()).filter(e => e.length !== 0)
     languages = languages.split(",").map(s => s.trim().toLowerCase()).filter(e => e.length !== 0)
@@ -144,18 +147,14 @@ app.post("/update", async (req,res) => {
         const valid = await isImageURL(image)
         if (!valid) return res.json({ success: false, errMessage: "Username/Email already taken" })
     }
-    else{
+    else {
         image = "https://i0.wp.com/justmarkup.com/img/avatar-default.png"
     }
     try {
-        await User.findByIdAndUpdate(_id, {username, email, password, languages, skills, description, image})
+        await User.findByIdAndUpdate(_id, { username, email, password, languages, skills, description, image })
         return res.json({ success: true })
-    } catch(e) {
+    } catch (e) {
         console.log(e)
-        return res.json({success:false, errMessage: e.message})
+        return res.json({ success: false, errMessage: e.message })
     }
 })
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/build/index.html'))
-  })
