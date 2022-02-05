@@ -26,6 +26,9 @@ const isLoggedIn = (req, res, next) => {
     next()
 }
 
+const path = require('path')
+app.use(express.static(path.join(__dirname, 'client/build')))
+
 const store = MongoStore.create({
     mongoUrl: dbURL,
     secret: "secret",
