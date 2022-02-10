@@ -30,10 +30,6 @@ const path = require('path')
 
 app.use(express.static(path.join(__dirname, 'client/build'))) 
 
-app.get('*', (request, response) => {  
-    response.sendFile(path.join(__dirname+'/client/build/index.html'))  
-})
-
 const store = MongoStore.create({
     mongoUrl: dbURL,
     secret: "secret",
@@ -160,3 +156,8 @@ app.post("/update", async (req, res) => {
         return res.json({ success: false, errMessage: e.message })
     }
 })
+
+app.get('*', function (req, res) {
+    const index = path.join(__dirname, 'client', 'build', 'index.html');
+    res.sendFile(index);
+  });

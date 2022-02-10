@@ -12,7 +12,7 @@ class AllUsers extends Component {
                 'Accept': 'application/json'
             }
 
-        }).then(res => res.json()).then(e => this.setState({ users: e }))
+        }).then(res => res.json()).then(e => this.setState({ users: e })).catch(e=> console.log(e))
     }
 
     componentDidMount = () => {
