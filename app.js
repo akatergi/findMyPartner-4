@@ -27,9 +27,11 @@ const isLoggedIn = (req, res, next) => {
 }
 
 const path = require('path')
-app.use(express.static(path.join(__dirname, 'client/build')))
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/build/index.html'))
+
+app.use(express.static(path.join(__dirname, 'client/build'))) 
+
+app.get('*', (request, response) => {  
+    response.sendFile(path.join(__dirname+'/client/build/index.html'))  
 })
 
 const store = MongoStore.create({
