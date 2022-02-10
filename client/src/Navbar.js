@@ -18,7 +18,7 @@ class Navbar extends Component {
     }
 
     isLoggedIn = () => {
-        axios.get("/isLogged").then(res => res.data).then(e => this.setState({ success: e.success, userID: e.user ? e.user._id : null }))
+        axios.get("/isLogged").then(res => res.data).then(e => this.setState({ success: e.success, userID: e.user ? e.user._id : null })).catch(e=>console.log(e))
     }
 
     render() {

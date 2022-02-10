@@ -25,7 +25,7 @@ class LoginUserM extends Component {
         axios.post('http://localhost:5000/login', loginBody, {
             headers: {
                 'Content-Type': 'application/json'
-            },
+            },  
             withCredentials: true
         })
             .then(() => { return this.props.navigate("/users") })
@@ -58,7 +58,7 @@ class LoginUserM extends Component {
                     </div>
                 </div>
                 <div className="col-12">
-                <button style={{marginLeft:"5%", width:"90%"}} className="btn btn-success mt-3"> Submit </button>
+                    <button style={{ marginLeft: "5%", width: "90%" }} className="btn btn-success mt-3"> Submit </button>
                 </div>
             </form>
         )
