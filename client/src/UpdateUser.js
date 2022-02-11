@@ -24,7 +24,7 @@ class UpdateUserM extends Component {
 
     handlePost = e => {
         e.preventDefault()
-        axios.post("http://localhost:5000/update", this.state, {
+        axios.post("update", this.state, {
             headers: {
                 'Content-Type': 'application/json'
             },

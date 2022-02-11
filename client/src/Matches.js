@@ -61,7 +61,7 @@ class Matches extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('/matchdata', {
+        axios.get('matchdata', {
             headers: {
                 'Content-Type': 'application/json'
             },

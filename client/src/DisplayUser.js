@@ -14,7 +14,7 @@ class DisplayUserM extends Component {
     }
 
     componentDidMount = () => {
-        axios.get(`http://localhost:5000/userdata/${this.props.id}`, this.state).then(res => res.data).then(e => this.setState({ user: e }))
+        axios.get(`userdata/${this.props.id}`, this.state).then(res => res.data).then(e => this.setState({ user: e }))
     }
 
     render() {

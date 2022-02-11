@@ -21,7 +21,7 @@ class CreateUserM extends Component {
 
     handlePost = e => {
         e.preventDefault()
-        axios.post("http://localhost:5000/create", this.state, {
+        axios.post("create", this.state, {
             headers: {
                 'Content-Type': 'application/json'
             },
