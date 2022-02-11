@@ -22,7 +22,7 @@ class LoginUserM extends Component {
     handlePost = e => {
         e.preventDefault()
         let loginBody = { username: this.state.username, password: this.state.password }
-        axios.post('http://localhost:5000/login', loginBody, {
+        axios.post('login', loginBody, {
             headers: {
                 'Content-Type': 'application/json'
             },
