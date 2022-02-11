@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 const handleLogout = () => {
-    axios.get("http://localhost:5000/logout", {
+    axios.get("logout", {
         headers: {
             'Content-Type': 'application/json'
         },
