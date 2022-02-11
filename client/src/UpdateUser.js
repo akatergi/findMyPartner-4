@@ -46,7 +46,7 @@ class UpdateUserM extends Component {
 
 
     componentDidMount = () => {
-        axios.get(`http://localhost:5000/isLogged`, {
+        axios.get(`isLogged`, {
             headers: {
                 'Content-Type': 'application/json'
             },
