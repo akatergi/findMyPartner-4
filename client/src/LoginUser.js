@@ -25,7 +25,7 @@ class LoginUserM extends Component {
         axios.post('http://localhost:5000/login', loginBody, {
             headers: {
                 'Content-Type': 'application/json'
-            },  
+            },
             withCredentials: true
         })
             .then(() => { return this.props.navigate("/users") })
