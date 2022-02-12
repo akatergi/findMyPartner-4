@@ -10,11 +10,15 @@
 
 .App{
   min-height: 100vh;
-  background-color: #d6a6e9;
+  background-color: #35589A;
   
 }
 
 .myNav{
-  background-color: rgb(86, 20, 86);
+  background-color: #370665;
   color:white
+}
+
+.display-1,.display-2,.display-3,.display-4{
+  color:rgb(39, 4, 4);
 }

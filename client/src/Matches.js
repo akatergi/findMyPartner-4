@@ -29,7 +29,7 @@ class Matches extends Component {
                     <div className="row">
                         <h1 className="display-3 text-center mb-4">Your #{this.state.index + 1} Closest Match: </h1>
                         <div className="col-5">
-                            <img className="mImage" src={u.image} />
+                            <img className="mImage" alt="user photo" src={u.image} />
                         </div>
                         <div className="col-6">
                             <div className="matchInfo">

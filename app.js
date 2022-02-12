@@ -28,7 +28,7 @@ const isLoggedIn = (req, res, next) => {
 
 const path = require('path')
 
-app.use(express.static(path.join(__dirname, 'client/build'))) 
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 const store = MongoStore.create({
     mongoUrl: dbURL,
@@ -41,7 +41,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
     cors({
-        origin: "http://findmypartner.herokuapp.com", // <-- location of the react app were connecting to
+        origin: "http://findmypartner.herokuapp.com/", // <-- FIX THIS
         credentials: true,
     })
 );
@@ -131,6 +131,20 @@ app.get("/matchdata", isLoggedIn, async (req, res) => {
     return res.json({ success: true, currUser: req.session.user, matches })
 })
 
+app.post("/finddata", async (req, res) => {
+    let testUser = req.body;
+    console.log(req.body)
+    let allUsers = await User.find({})
+    let matches = allUsers.sort((user1, user2) => match(testUser, user1) - match(testUser, user2)).reverse().map(u => { return { user: u, percentage: match(testUser, u) } });
+    if (req.session.user) {
+        for (let i = 0; i < matches.length; i++) {
+            if (matches[i].user.username === req.session.user.username) matches.splice(i, 1);
+            break;
+        }
+    }
+    return res.json({ success: true, currUser: req.session.user, matches })
+})
+
 app.get("/logout", (req, res) => {
     req.logout();
     req.session.user = null;
@@ -160,4 +174,4 @@ app.post("/update", async (req, res) => {
 app.get('*', function (req, res) {
     const index = path.join(__dirname, 'client', 'build', 'index.html');
     res.sendFile(index);
-  });
+});

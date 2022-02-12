@@ -7,6 +7,7 @@ import LoginUser from "./LoginUser"
 import Matches from "./Matches"
 import Navbar from './Navbar'
 import UpdateUser from './UpdateUser'
+import Find from './Find'
 //Y
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/create" element={<CreateUser />} />
         <Route path="/login" element={<LoginUser />} />
         <Route path="/matches" element={<Matches />} />
+        <Route path="/find" element={<Find />} />
         <Route path="/*" element={<h1>Could not find that route!</h1>} />
       </Routes>
     </div>
