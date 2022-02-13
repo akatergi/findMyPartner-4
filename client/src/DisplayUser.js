@@ -27,7 +27,7 @@ class DisplayUserM extends Component {
                 <div className="row">
                     <div className="col-6">
                         <h3 className='text-center dTitle'> {user.username} </h3>
-                        <p className="text-center" style={{fontSize:"1.3em"}}> {user.email} </p>
+                        <p className="text-center" style={{fontSize:"1.3em"}}> <a className="emailLink" href={`mailto:${user.email}`}>{user.email}</a> </p>
                         <img className="dImage" width="100px" src={user.image} alt="profilepicture" />
                     </div>
                     <div className="col-6">

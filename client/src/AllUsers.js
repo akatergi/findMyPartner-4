@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import "./AllUsers.css"
+import UserCard from './UserCard';
 
 class AllUsers extends Component {
     state = {
@@ -19,25 +20,8 @@ class AllUsers extends Component {
         this.getUserData()
     }
 
-    makeCard = u => {
-        var img = <img style={{width:"100%"}} src={u.image} />
-        return (
-            <div className="card userCard mt-4" >
-                <a href={`/users/${u._id}`} >
-                    <div className="card-header cardTitle text-center" > <span id="Ausername" > {u.username} </span> </div >
-                    {img}
-                    <ul className="list-group list-group-flush" >
-                        <div className="card-body" >
-                            <span id="Adescription" > {u.description} </span>
-                        </div>
-                    </ul>
-                </a>
-            </div >
-        )
-    }
-
     render() {
-        let userList = this.state.users.map(u => <div className="col-3" key={u.username}> {this.makeCard(u)} </div>)
+        let userList = this.state.users.map(u => <div className="col-3" key={u.username}> <UserCard u={u} /> </div>)
         return (<div>
             <div className="container">
                 <div className="row">

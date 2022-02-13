@@ -42,7 +42,7 @@ class Matches extends Component {
                                 <div className="mE"><span className="mTitle">Description: </span>{u.description}</div>
                                 <div className="mE"><span className="mTitle">Languages: </span>{u.languages.toString()}</div>
                                 <div className="mE"><span className="mTitle">Skills: </span>{u.skills.toString()}</div>
-                                <div className="mE"><span className="mTitle">Contact E-mail: </span>{u.email}</div>
+                                <div className="mE"><span className="mTitle">Contact E-mail: </span><a className="emailLink" href={`mailto:${u.email}`}>{u.email}</a></div>
                             </div>
                         </div>
                     </div>

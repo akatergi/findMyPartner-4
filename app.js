@@ -163,7 +163,9 @@ app.post("/update", async (req, res) => {
         image = "https://i0.wp.com/justmarkup.com/img/avatar-default.png"
     }
     try {
-        await User.findByIdAndUpdate(_id, { username, email, password, languages, skills, description, image })
+        const updatedUser = await User.findByIdAndUpdate(_id, { username, email, password, languages, skills, description, image })
+        const user2 = await User.findById(_id)
+        req.session.user = user2
         return res.json({ success: true })
     } catch (e) {
         console.log(e)
