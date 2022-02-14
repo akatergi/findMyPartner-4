@@ -23,10 +23,21 @@
   color:rgb(39, 4, 4);
 }
 
-a.emailLink{
-  color:red
-}
-
 .sub{
   color:rgb(179, 194, 206);
+}
+
+.dropdownNav{
+  color:red;
+  display:flex;
+  /* flex-direction: column; */
+}
+
+.user2,.nonuser2 {
+  display:flex;
+  flex-direction: column;
+}
+
+.myNavLink{
+  color:red;
 }

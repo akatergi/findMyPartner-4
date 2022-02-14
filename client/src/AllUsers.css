@@ -1,9 +1,7 @@
-a,
+a.userCardA,
 .card,
 .cardTitle,
-.card-body,
-a:link,
-a:visited {
+.card-body{
     text-decoration: none;
     color: black;
 }

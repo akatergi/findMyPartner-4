@@ -21,7 +21,7 @@ class AllUsers extends Component {
     }
 
     render() {
-        let userList = this.state.users.map(u => <div className="col-3" key={u.username}> <UserCard u={u} /> </div>)
+        let userList = this.state.users.map(u => <div className="col-md-3" key={u.username}> <UserCard u={u} /> </div>)
         return (<div>
             <div className="container">
                 <div className="row">

@@ -28,16 +28,16 @@ class Matches extends Component {
                 <div className="container">
                     <div className="row">
                         <h1 className="display-3 text-center mb-4">Your #{this.state.index + 1} Closest Match: </h1>
-                        <div className="col-5">
+                        <div className="col-lg-5">
                             <img className="mImage" alt="user photo" src={u.image} />
                         </div>
-                        <div className="col-6">
-                            <div className="matchInfo">
+                        <div className="col-lg-6">
+                            <div className="matchInfo py-2">
                                 <span className="infoSpan"> You and {u.username} are a(n) <b>{round(p * 100, 2)}%</b> Match! </span>
                                 <span className="infoSpan"> You are both skilled in <b>{u.skills.filter(el => u2.skills.includes(el)).toString()}</b> </span>
                                 <span className="infoSpan"> You both code in <b>{u.languages.filter(el => u2.languages.includes(el)).toString()}</b> </span>
                             </div>
-                            <div className="userInfo">
+                            <div className="userInfo mb-2">
                                 <div className="mE"><span className="mTitle">Username: </span>{u.username}</div>
                                 <div className="mE"><span className="mTitle">Description: </span>{u.description}</div>
                                 <div className="mE"><span className="mTitle">Languages: </span>{u.languages.toString()}</div>

@@ -18,12 +18,12 @@ class DisplaySide extends Component {
                 <div className="container">
                     <div className="row">
                         <h1 className="display-3 text-center mb-4">The #{this.props.index + 1} Closest Match: </h1>
-                        <div className="col-5">
+                        <div className="col-lg-5">
                             <h1 className="display-4 text-center">{u.username}</h1>
                             <img className="mImage" alt="user photo" src={u.image} />
                             <p className='prefDesc'>{u.description}</p>
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6">
                             <div className="matchInfo mb-3">
                                 <span className="infoSpan"> {u.username} is a(n) <b>{round(p * 100, 2)}%</b> Match! </span>
                                 <span className="infoSpan"> They are skilled in <b>{u.skills.filter(el => u2.skills.includes(el)).toString().replace(/,/g, ', ')}</b> </span>
