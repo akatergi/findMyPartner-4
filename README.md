@@ -1,3 +1,3 @@
-#findMyPartner
+**TO VIEW THIS WEBSITE IN ACTION, VISIT:**
 
-The perfect social media platform to find the exact partner you're looking to collaborate with!
+-----> http://findmypartner.herokuapp.com <-----
