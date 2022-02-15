@@ -15,9 +15,9 @@ class Home extends Component {
                             any concerns, feedback, or inquiries about this project!
                         </p>
                         <div className="col-8 offset-2">
-                            <a id="regBtn" className="btn btn-large btn-warning myButton"> Register </a>
+                            <a id="regBtn" className="btn btn-large btn-warning myButton" href="/create"> Register </a>
                             <p className="homelog"> Already have an account? </p>
-                            <a id="logBtn" className="btn btn-large btn-success myButton"> Login </a>
+                            <a id="logBtn" className="btn btn-large btn-success myButton" href="/login"> Login </a>
                         </div>
                     </div>
                 </div>
