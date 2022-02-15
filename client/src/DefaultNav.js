@@ -6,7 +6,7 @@ class DefaultNav extends Component{
         return(
             <nav className="navbar navbar-expand-lg myNav navbar-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/users">findMyPartner</a>
+                    <a className="navbar-brand" href="/">findMyPartner</a>
                     <button className="navbar-toggler" onClick={this.props.expandNav} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
