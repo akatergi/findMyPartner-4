@@ -8,6 +8,7 @@ import Matches from "./Matches"
 import Navbar from './Navbar'
 import UpdateUser from './UpdateUser'
 import Find from './Find'
+import Home from './Home';
 //Y
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossOrigin="anonymous" />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Navigate replace to="/users" />} />
+        <Route path="/" element={<Home />} />
         <Route path="/users" element={<AllUsers />} />
         <Route path="/users/:id" element={<DisplayUser />} />
         <Route path="/edit" element={<UpdateUser />} />

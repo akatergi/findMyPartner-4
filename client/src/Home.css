@@ -1,0 +1,28 @@
+#HomePage{
+    background-image: url("https://wallpapers.com/images/high/light-blue-background-epymgjpntdbwbjoj.jpg");
+    min-height:100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.homepar{
+    font-size:1.5em;
+}
+
+.myButton#regBtn, .myButton#logBtn{
+    width:100%;
+    font-size:2em;
+    border-radius: 1em;
+}
+
+.homelog{
+    display:flex;
+    justify-content: center;
+    margin-top:0.4em;
+    font-size: 1.25em;
+}
+
+.homelog{
+    color:#61656a;
+    margin-top:2em;
+}
